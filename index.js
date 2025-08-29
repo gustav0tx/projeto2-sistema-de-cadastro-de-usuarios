@@ -17,17 +17,18 @@ do {
         adicionarUsuario = 'S'
     } else if (adicionarUsuario.toUpperCase().trim() == 'N') {
         adicionarUsuario = 'N'
-    } else if (adicionarUsuario.toUpperCase().trim() == 'S' || adicionarUsuario.toUpperCase().trim() == 'N'){
+    } else if (adicionarUsuario.toUpperCase().trim() !== 'S' || adicionarUsuario.toUpperCase().trim() !== 'N'){
         console.log('Dado invalido')
         break
     }
+
     let usuario = new Usuario(nome, idade, email)
 
     if (usuarioAtivo.toUpperCase().trim() == 'S') {
         usuario.ativo = true
     } else if (usuarioAtivo.toUpperCase().trim() == 'N') {
         usuario.ativo = false
-    } else if (usuarioAtivo.toUpperCase().trim() == 'S' || usuarioAtivo.toUpperCase().trim() == 'N'){
+    } else if (usuarioAtivo.toUpperCase().trim() !== 'S' || usuarioAtivo.toUpperCase().trim() !== 'N'){
         console.log('Dado invalido')
         break
     }
