@@ -19,7 +19,16 @@ do {
         usuario.ativo = true
     } else if (usuarioAtivo.toUpperCase().trim() == 'N') {
         usuario.ativo = false
-    } else {
+    } else if (usuarioAtivo.toUpperCase().trim() == 'S' || usuarioAtivo.toUpperCase().trim() == 'N'){
+        console.log('Dado invalido')
+        break
+    }
+
+    if (adicionarUsuario.toUpperCase().trim() == 'S') {
+        adicionarUsuario = 'S'
+    } else if (adicionarUsuario.toUpperCase().trim() == 'N') {
+        adicionarUsuario = 'N'
+    } else if (adicionarUsuario.toUpperCase().trim() == 'S' || adicionarUsuario.toUpperCase().trim() == 'N'){
         console.log('Dado invalido')
         break
     }
