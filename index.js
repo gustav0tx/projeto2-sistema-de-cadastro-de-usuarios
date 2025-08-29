@@ -12,7 +12,15 @@ do {
     let email = prompt('Digite o email do usuário: ')
     let usuarioAtivo = prompt('Usuário ativo? [S/N]: ')
     adicionarUsuario = prompt('Deseja adicionar outro usuário? [S/N]: ')
-
+    
+    if (adicionarUsuario.toUpperCase().trim() == 'S') {
+        adicionarUsuario = 'S'
+    } else if (adicionarUsuario.toUpperCase().trim() == 'N') {
+        adicionarUsuario = 'N'
+    } else if (adicionarUsuario.toUpperCase().trim() == 'S' || adicionarUsuario.toUpperCase().trim() == 'N'){
+        console.log('Dado invalido')
+        break
+    }
     let usuario = new Usuario(nome, idade, email)
 
     if (usuarioAtivo.toUpperCase().trim() == 'S') {
@@ -24,14 +32,6 @@ do {
         break
     }
 
-    if (adicionarUsuario.toUpperCase().trim() == 'S') {
-        adicionarUsuario = 'S'
-    } else if (adicionarUsuario.toUpperCase().trim() == 'N') {
-        adicionarUsuario = 'N'
-    } else if (adicionarUsuario.toUpperCase().trim() == 'S' || adicionarUsuario.toUpperCase().trim() == 'N'){
-        console.log('Dado invalido')
-        break
-    }
 
     usuarios.push(usuario)
 
